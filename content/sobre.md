@@ -1,23 +1,20 @@
-+++
-title = 'Sobre'
-date = 2026-08-03
-draft = false
-+++
++++ title = 'Sobre' date = 2026-08-03 draft = false +++
 
 ## Olá, eu sou Nikolas N. Figueiredo
 
-Sou Estatístico, Cientista de Dados e Docente. Neste espaço compartilho projetos,
-publicações e reflexões sobre estatística, ciência de dados e ensino.
+Sou Estatístico, Cientista de Dados e Docente. Neste espaço compartilho projetos, publicações e reflexões sobre estatística, ciência de dados e ensino.
 
+```{=html}
 <!--
   EDITE AQUI: substitua o texto acima e abaixo pelo seu próprio conteúdo.
   Sugestões de blocos para incluir:
 -->
+```
 
 ### Formação
 
-- *(ex: Graduação em Estatística — Universidade X, ano)*
-- *(ex: Mestrado/Doutorado em ... — Universidade Y, ano)*
+- *Mestrado em Estatística Aplicada e Biometria — Universidade Federal de Alfenas, 2026*
+-  *Graduação em Matemática — Universidade Federal de Alfenas, 2024*
 
 ### Áreas de interesse
 
@@ -27,7 +24,7 @@ publicações e reflexões sobre estatística, ciência de dados e ensino.
 
 ### Contato
 
-- E-mail: *seu-email@exemplo.com*
-- LinkedIn: *link*
-- GitHub: *link*
-- Lattes: *link*
+- E-mail: *nikolasfig\@gmail.com*
+- LinkedIn: www.linkedin.com/in/nikolas-figueiredo-82690627a
+- GitHub: [*link*](https://github.com/Nikolasfig)
+- Lattes: *http://lattes.cnpq.br/3128218938439663*
