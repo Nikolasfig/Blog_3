@@ -6,14 +6,28 @@
     <description>Recent content on Nikolas N. Figueiredo</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://Nikolasfig.github.io/Blog_3/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nome do Projeto (edite este título)</title>
-      <link>https://Nikolasfig.github.io/Blog_3/projetos/projeto-exemplo/</link>
+      <title>Audiências públicas da Assembleia Legislativa de Minas Gerais: locus da sociedade civil ou espaço de acomodação de interesses de órgãos interestatais?</title>
+      <link>https://Nikolasfig.github.io/Blog_3/publicacoes/artigo-assembleias/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://Nikolasfig.github.io/Blog_3/publicacoes/artigo-assembleias/</guid>
+      <description>Artigo publicado na Revista de Sociologia e Política que analisa, por meio de Análise de Redes Sociais, quem ocupa o papel central nas audiências públicas da Assembleia Legislativa de Minas Gerais.</description>
+    </item>
+    <item>
+      <title>Proposta de uma métrica para o efeito de casa baseada em pontos ganhos</title>
+      <link>https://Nikolasfig.github.io/Blog_3/publicacoes/artigo-mando-de-campo/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://Nikolasfig.github.io/Blog_3/publicacoes/artigo-mando-de-campo/</guid>
+      <description>Artigo que propõe uma nova métrica para mensurar o efeito de casa em competições esportivas de pontos corridos, aplicada ao Campeonato Brasileiro Série A entre 2003 e 2020.</description>
+    </item>
+    <item>
+      <title>Comparação de Modelos de Predição de Resultados de Jogos de Futebol</title>
+      <link>https://Nikolasfig.github.io/Blog_3/projetos/modelos-preditivos-futebol/</link>
       <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
-      <guid>https://Nikolasfig.github.io/Blog_3/projetos/projeto-exemplo/</guid>
-      <description>Uma frase curta descrevendo o projeto (aparece na listagem).</description>
+      <guid>https://Nikolasfig.github.io/Blog_3/projetos/modelos-preditivos-futebol/</guid>
+      <description>Iniciação científica dedicada à aplicação e avaliação de modelos estatísticos para a predição de resultados de partidas do Campeonato Brasileiro Série A de 2019.</description>
     </item>
     <item>
       <title>Sobre</title>
@@ -21,12 +35,11 @@
       <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
       <guid>https://Nikolasfig.github.io/Blog_3/sobre/</guid>
       <description>&lt;h2 id=&#34;olá-eu-sou-nikolas-n-figueiredo&#34;&gt;Olá, eu sou Nikolas N. Figueiredo&lt;/h2&gt;
-&lt;p&gt;Sou Estatístico, Cientista de Dados e Docente. Neste espaço compartilho projetos,
-publicações e reflexões sobre estatística, ciência de dados e ensino.&lt;/p&gt;
+&lt;p&gt;Sou Estatístico, Cientista de Dados e Docente. Neste espaço compartilho projetos, publicações e reflexões sobre estatística, ciência de dados e ensino.&lt;/p&gt;
 &lt;h3 id=&#34;formação&#34;&gt;Formação&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;(ex: Graduação em Estatística — Universidade X, ano)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;(ex: Mestrado/Doutorado em &amp;hellip; — Universidade Y, ano)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Mestrado em Estatística Aplicada e Biometria — Universidade Federal de Alfenas, 2026&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Graduação em Matemática — Universidade Federal de Alfenas, 2024&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;áreas-de-interesse&#34;&gt;Áreas de interesse&lt;/h3&gt;
 &lt;ul&gt;
@@ -36,18 +49,11 @@ publicações e reflexões sobre estatística, ciência de dados e ensino.&lt;/p
 &lt;/ul&gt;
 &lt;h3 id=&#34;contato&#34;&gt;Contato&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;E-mail: &lt;em&gt;&lt;a href=&#34;mailto:seu-email@exemplo.com&#34;&gt;seu-email@exemplo.com&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;LinkedIn: &lt;em&gt;link&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;GitHub: &lt;em&gt;link&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Lattes: &lt;em&gt;link&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;E-mail: &lt;em&gt;nikolasfig@gmail.com&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/nikolas-figueiredo-82690627a&#34;&gt;www.linkedin.com/in/nikolas-figueiredo-82690627a&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/Nikolasfig&#34;&gt;&lt;em&gt;link&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lattes: &lt;em&gt;&lt;a href=&#34;http://lattes.cnpq.br/3128218938439663&#34;&gt;http://lattes.cnpq.br/3128218938439663&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Título do artigo (edite)</title>
-      <link>https://Nikolasfig.github.io/Blog_3/publicacoes/publicacao-exemplo/</link>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
-      <guid>https://Nikolasfig.github.io/Blog_3/publicacoes/publicacao-exemplo/</guid>
-      <description>Referência curta ou uma linha de resumo.</description>
     </item>
   </channel>
 </rss>

@@ -6,14 +6,21 @@
     <description>Recent content in Publicações on Nikolas N. Figueiredo</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://Nikolasfig.github.io/Blog_3/publicacoes/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Título do artigo (edite)</title>
-      <link>https://Nikolasfig.github.io/Blog_3/publicacoes/publicacao-exemplo/</link>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
-      <guid>https://Nikolasfig.github.io/Blog_3/publicacoes/publicacao-exemplo/</guid>
-      <description>Referência curta ou uma linha de resumo.</description>
+      <title>Audiências públicas da Assembleia Legislativa de Minas Gerais: locus da sociedade civil ou espaço de acomodação de interesses de órgãos interestatais?</title>
+      <link>https://Nikolasfig.github.io/Blog_3/publicacoes/artigo-assembleias/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://Nikolasfig.github.io/Blog_3/publicacoes/artigo-assembleias/</guid>
+      <description>Artigo publicado na Revista de Sociologia e Política que analisa, por meio de Análise de Redes Sociais, quem ocupa o papel central nas audiências públicas da Assembleia Legislativa de Minas Gerais.</description>
+    </item>
+    <item>
+      <title>Proposta de uma métrica para o efeito de casa baseada em pontos ganhos</title>
+      <link>https://Nikolasfig.github.io/Blog_3/publicacoes/artigo-mando-de-campo/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://Nikolasfig.github.io/Blog_3/publicacoes/artigo-mando-de-campo/</guid>
+      <description>Artigo que propõe uma nova métrica para mensurar o efeito de casa em competições esportivas de pontos corridos, aplicada ao Campeonato Brasileiro Série A entre 2003 e 2020.</description>
     </item>
   </channel>
 </rss>
