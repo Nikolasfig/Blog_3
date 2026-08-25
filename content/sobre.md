@@ -23,7 +23,7 @@ Sou Estatístico, Cientista de Dados e Docente. Neste espaço compartilho projet
 - Ensino de estatística
 
 ### Contato
-
+  
 - E-mail: *nikolasfig\@gmail.com*
 - LinkedIn: www.linkedin.com/in/nikolas-figueiredo-82690627a
 - GitHub: [*link*](https://github.com/Nikolasfig)
