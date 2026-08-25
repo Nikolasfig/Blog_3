@@ -1,15 +1,13 @@
-+++ title = 'Sobre' date = 2026-08-03 draft = false +++
++++
+title = "Sobre"
+date = 2026-08-03
+draft = false
++++
 
 ## Olá, eu sou Nikolas N. Figueiredo
 
 Sou Estatístico, Cientista de Dados e Docente. Neste espaço compartilho projetos, publicações e reflexões sobre estatística, ciência de dados e ensino.
 
-```{=html}
-<!--
-  EDITE AQUI: substitua o texto acima e abaixo pelo seu próprio conteúdo.
-  Sugestões de blocos para incluir:
--->
-```
 
 ### Formação
 
