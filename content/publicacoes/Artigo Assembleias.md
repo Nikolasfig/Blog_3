@@ -6,7 +6,6 @@ tags = ["artigo", "sociologia", "política", "análise de redes sociais", "ALMG"
 summary = "Artigo publicado na Revista de Sociologia e Política que analisa, por meio de Análise de Redes Sociais, quem ocupa o papel central nas audiências públicas da Assembleia Legislativa de Minas Gerais."
 +++
 
-# Audiências públicas da Assembleia Legislativa de Minas Gerais: *locus* da sociedade civil ou espaço de acomodação de interesses de órgãos interestatais?
 
 **Autores:** Eduardo Moreira da Silva; Thiago Silame; Antonio Carlos Andrade Ribeiro; **Nikolas Neves de Figueiredo**; Denisson da Silva Santos.
 

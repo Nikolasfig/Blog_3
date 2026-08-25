@@ -6,7 +6,6 @@ tags = ["artigo", "estatística", "futebol", "efeito de casa", "Campeonato Brasi
 summary = "Artigo que propõe uma nova métrica para mensurar o efeito de casa em competições esportivas de pontos corridos, aplicada ao Campeonato Brasileiro Série A entre 2003 e 2020."
 +++
 
-# Proposta de uma métrica para o efeito de casa baseada em pontos ganhos
 
 **Autores:** Giovani Festa Paludo; **Nikolas Neves de Figueiredo**; Eric Batista Ferreira.
 

@@ -3,60 +3,92 @@ title = "Comparação de Modelos de Predição de Resultados de Jogos de Futebol
 date = 2026-08-03
 draft = false
 tags = ["R", "estatística", "futebol", "modelagem estatística", "predição"]
-summary = "Iniciação científica dedicada à aplicação e avaliação de modelos estatísticos para a predição de resultados de partidas do Campeonato Brasileiro Série A de 2019."
+summary = "Projeto de iniciação científica que marcou o início de uma linha de pesquisa dedicada à modelagem estatística e à previsão de resultados no futebol brasileiro."
 +++
 
-## Descrição
+Descrição
 
-Este projeto corresponde a uma **iniciação científica** dedicada à aplicação de modelos estatísticos para a predição de resultados de partidas de futebol. Foram utilizados modelos propostos por **Arruda (2000)**, aplicados aos jogos do **Campeonato Brasileiro Série A de 2019**.
+Este projeto corresponde a uma iniciação científica dedicada à aplicação de modelos estatísticos para a previsão de resultados de partidas de futebol, tendo como objeto de estudo o Campeonato Brasileiro Série A de 2019.
 
-Os resultados das previsões foram avaliados por meio do **Erro Preditivo Médio (EPM)**, permitindo comparar o desempenho dos diferentes modelos e analisar sua capacidade de previsão dos resultados das partidas.
+A pesquisa teve como base os modelos propostos por Arruda (2000) e buscou avaliar sua capacidade de previsão por meio do Erro Preditivo Médio (EPM). O trabalho proporcionou o primeiro contato sistemático com a aplicação de métodos estatísticos e computacionais à análise preditiva no futebol.
 
-**Situação:** Concluído
-**Natureza:** Pesquisa
+Situação: Concluído
+Natureza: Pesquisa
 
-## Modelagem Estatística na Previsão de Resultados no Futebol
+Objetivo
 
-Minha trajetória com modelos preditivos aplicados ao esporte começou nesta iniciação científica, a partir do estudo dos modelos de Arruda (2000) para a previsão de resultados do Campeonato Brasileiro.
+O objetivo foi aplicar modelos estatísticos de previsão aos resultados do Campeonato Brasileiro Série A de 2019 e avaliar seu desempenho preditivo.
 
-Esse primeiro trabalho serviu como base para o desenvolvimento de uma linha de pesquisa voltada à **modelagem estatística e à predição de resultados no futebol**, que posteriormente foi ampliada para a comparação de diferentes modelos, métricas de avaliação e estratégias de previsão.
+A pesquisa buscou compreender como modelos probabilísticos podem ser utilizados para representar os resultados de partidas de futebol, considerando a elevada incerteza característica do esporte.
 
-A experiência permitiu integrar **estatística, programação e análise de dados esportivos**, explorando diferentes abordagens para lidar com a elevada imprevisibilidade presente nos resultados das partidas de futebol.
+Metodologia
 
-Atualmente, essa linha de pesquisa continua sendo desenvolvida por meio da investigação de modelos preditivos mais robustos, buscando compreender não apenas a capacidade de acerto dos modelos, mas também sua **consistência, estabilidade e parcimônia**.
+Foram aplicados modelos estatísticos propostos por Arruda (2000) aos dados do Campeonato Brasileiro Série A de 2019.
 
-## Dados e metodologia
+As previsões obtidas foram comparadas aos resultados observados, utilizando o Erro Preditivo Médio (EPM) como métrica de avaliação.
 
-* **Competição:** Campeonato Brasileiro Série A
-* **Temporada analisada:** 2019
-* **Modelos:** modelos estatísticos propostos por Arruda (2000)
-* **Métrica principal:** Erro Preditivo Médio (EPM)
-* **Linguagem:** R
+O desenvolvimento do projeto envolveu etapas de organização e tratamento dos dados, implementação computacional dos modelos, geração das previsões e avaliação estatística dos resultados.
 
-## Ferramentas utilizadas
+Dados
+Competição: Campeonato Brasileiro Série A
+Temporada: 2019
+Unidade de análise: partidas de futebol
+Modelos: modelos propostos por Arruda (2000)
+Métrica de avaliação: Erro Preditivo Médio (EPM)
+Resultados e contribuições
 
-* **R**
-* **R Markdown**
-* **Tidyverse**
-* **ggplot2**
-* **dplyr**
-* **tidyr**
-* **caret**
-* **randomForest**
-* **XGBoost**
+O projeto permitiu avaliar a aplicação dos modelos de Arruda (2000) ao futebol brasileiro e compreender algumas das dificuldades envolvidas na previsão de resultados esportivos.
 
-## Trabalhos e materiais
+Mais do que os resultados obtidos para a temporada analisada, a pesquisa foi importante para o desenvolvimento de uma trajetória de investigação envolvendo estatística, programação, modelagem e ciência de dados aplicada ao esporte.
 
-Os códigos, dados utilizados e demais materiais relacionados ao projeto podem ser disponibilizados no repositório do GitHub.
+Entre as principais competências desenvolvidas estão:
 
-### Repositório
+tratamento e organização de dados esportivos;
+implementação computacional de modelos estatísticos;
+geração de previsões;
+avaliação de desempenho preditivo;
+análise estatística dos resultados;
+visualização de dados com R.
+Continuidade da pesquisa
 
-* [GitHub](https://github.com/Nikolasfig)
+A iniciação científica constituiu o ponto de partida de uma linha de pesquisa dedicada à modelagem estatística e à previsão de resultados no futebol brasileiro.
 
-> **Em breve:** disponibilização do código-fonte, bases de dados, análises e resultados deste projeto.
+Posteriormente, essa investigação foi ampliada para um estudo comparativo de diferentes modelos de previsão aplicados ao Campeonato Brasileiro Série A, buscando não apenas avaliar a capacidade de acerto dos modelos, mas também investigar sua consistência, calibração, complexidade e parcimônia.
 
-## Continuidade da pesquisa
+Nesse estudo posterior, foram analisados 35 modelos distintos, derivados de dois métodos reconhecidos na literatura e de diferentes variações metodológicas. Os modelos foram avaliados por meio de 11 métricas, contemplando aspectos como acurácia, erro, calibração probabilística, complexidade e robustez.
 
-Este projeto representa o início de uma trajetória de pesquisa em **modelagem estatística aplicada ao futebol**. A partir dessa experiência, foram desenvolvidos trabalhos posteriores envolvendo diferentes modelos de previsão, métricas de avaliação e bases de dados do Campeonato Brasileiro.
+Também foi investigado o impacto de diferentes janelas temporais, definidas de acordo com o número de rodadas anteriores utilizadas para gerar as previsões.
 
-Essa linha culminou no desenvolvimento de pesquisas mais abrangentes sobre os **limites da predição de resultados no futebol brasileiro**, ampliando o período analisado e o número de modelos e métricas comparados.
+Os resultados evidenciaram que o desempenho dos modelos depende da métrica utilizada e da configuração adotada. Entre os modelos analisados, UfmgGer e Sd1Ger apresentaram os melhores desempenhos globais. O modelo ConTeiMan, por sua vez, destacou-se pela combinação entre uma metodologia extremamente simples e uma elevada taxa de acerto.
+
+A pesquisa posterior também permitiu aprofundar uma questão fundamental na modelagem preditiva esportiva: modelos mais complexos nem sempre apresentam desempenho superior aos modelos mais simples. Dessa forma, a análise da parcimônia tornou-se um elemento central para compreender a relação entre complexidade, desempenho e estabilidade das previsões.
+
+Da iniciação científica à pesquisa sobre os limites da predição
+
+A experiência adquirida nesta iniciação científica foi fundamental para a consolidação de uma linha de pesquisa que posteriormente passou a investigar de forma mais ampla os limites da predição de resultados no futebol brasileiro.
+
+Esse percurso envolveu a ampliação das bases de dados, do número de modelos e das métricas utilizadas, além da incorporação de diferentes perspectivas para avaliar o desempenho preditivo.
+
+O objetivo deixou de ser apenas identificar qual modelo apresenta maior taxa de acerto e passou a envolver uma questão mais ampla: até que ponto modelos estatísticos são capazes de prever resultados de partidas de futebol de maneira consistente, robusta e parcimoniosa?
+
+Ferramentas utilizadas
+R
+R Markdown
+Tidyverse
+ggplot2
+dplyr
+tidyr
+caret
+randomForest
+XGBoost
+Materiais
+
+Os códigos, dados e demais materiais relacionados ao projeto podem ser disponibilizados para consulta e reprodução das análises.
+
+Repositório
+
+GitHub
+
+Referência
+
+ARRUDA, G. Modelos estatísticos aplicados à previsão de resultados de partidas de futebol. 2000.
