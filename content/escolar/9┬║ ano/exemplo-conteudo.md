@@ -12,7 +12,7 @@ summary = 'Uma frase curta descrevendo o material (aparece na listagem).'
 
 ## Conteúdo
 
-*(Explicação, exercícios, links para PDFs ou vídeos.)*
+[Lista de Exercício](lista_9_3bim.pdf)
 
 ## Material de apoio
 
