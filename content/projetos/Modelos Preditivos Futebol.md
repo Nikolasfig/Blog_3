@@ -8,7 +8,9 @@ summary = "Projeto de iniciação científica que marcou o início de uma linha 
 
 Descrição
 
-Este projeto corresponde a uma iniciação científica dedicada à aplicação de modelos estatísticos para a previsão de resultados de partidas de futebol, tendo como objeto de estudo o Campeonato Brasileiro Série A de 2019.
+Este projeto corresponde a uma Pesquisa científica dedicada à aplicação de modelos estatísticos 
+para a previsão de resultados de partidas de futebol, tendo como objeto de estudo o Campeonato Brasileiro 
+Série A de 2003 à 2025. 
 
 A pesquisa teve como base os modelos propostos por Arruda (2000) e buscou avaliar sua capacidade de previsão por meio do Erro Preditivo Médio (EPM). O trabalho proporcionou o primeiro contato sistemático com a aplicação de métodos estatísticos e computacionais à análise preditiva no futebol.
 
@@ -71,17 +73,17 @@ Esse percurso envolveu a ampliação das bases de dados, do número de modelos e
 
 O objetivo deixou de ser apenas identificar qual modelo apresenta maior taxa de acerto e passou a envolver uma questão mais ampla: até que ponto modelos estatísticos são capazes de prever resultados de partidas de futebol de maneira consistente, robusta e parcimoniosa?
 
-Ferramentas utilizadas
-R
-R Markdown
-Tidyverse
-ggplot2
-dplyr
-tidyr
-caret
-randomForest
-XGBoost
-Materiais
+Ferramentas utilizadas:
+- R
+- R Markdown
+- Tidyverse
+- ggplot2
+- dplyr
+- tidyr
+- caret
+- randomForest
+- XGBoost
+
 
 Os códigos, dados e demais materiais relacionados ao projeto podem ser disponibilizados para consulta e reprodução das análises.
 
