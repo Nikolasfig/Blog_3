@@ -15,5 +15,12 @@
       <guid>https://Nikolasfig.github.io/Blog_3/projetos/modelos-preditivos-futebol/</guid>
       <description>Projeto de iniciação científica que marcou o início de uma linha de pesquisa dedicada à modelagem estatística e à previsão de resultados no futebol brasileiro.</description>
     </item>
+    <item>
+      <title>Odds Compiler Assessment</title>
+      <link>https://Nikolasfig.github.io/Blog_3/projetos/odds-compiler-assessment/</link>
+      <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://Nikolasfig.github.io/Blog_3/projetos/odds-compiler-assessment/</guid>
+      <description>Relatório completo em R (distill) sobre o Odds Compiler Assessment, incorporado abaixo.</description>
+    </item>
   </channel>
 </rss>

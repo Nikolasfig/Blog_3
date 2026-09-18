@@ -23,6 +23,7 @@ Sou Estatístico, Cientista de Dados e Docente. Neste espaço compartilho projet
 ### Contato
   
 - E-mail: *nikolasfig\@gmail.com*
-- LinkedIn: www.linkedin.com/in/nikolas-figueiredo-82690627a
-- GitHub: [*link*](https://github.com/Nikolasfig)
-- Lattes: *http://lattes.cnpq.br/3128218938439663*
+- Youtube: [*@Prof.Figueiredo*](https://www.youtube.com/@Prof.Figueiredo)
+- LinkedIn: [*link*](https://www.linkedin.com/in/nikolas-figueiredo-82690627a)
+- GitHub: [*Nikolasfig*](https://github.com/Nikolasfig)
+- Lattes: [*link*](http://lattes.cnpq.br/3128218938439663)

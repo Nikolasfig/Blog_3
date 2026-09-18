@@ -1,0 +1,375 @@
+---
+title: "Modelo de Regressão para Crimes"
+author: "Nikolas Neves de Figueiredo"
+date: "`r format(Sys.Date(), '%d de %B de %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    theme: journal
+    code_folding: hide
+  pdf_document:
+    latex_engine: xelatex
+    toc: true
+    number_sections: true
+    fig_caption: true
+  word_document:
+    toc: true
+    number_sections: true
+    fig_caption: true
+fontsize: 12pt
+geometry: margin=1in
+lang: "pt-BR"
+---
+
+# Atividade pratica em sala de aula.
+
+O objetivo dessa atividade é estudar o comportamento do número de crimes de uma determinada localidade a partir de vários fatores como população da cidade, renda per capita da cidade, área total da cidade, etc. Portanto, é preciso encontrar um modelo de regressão que relacione a variável independente às variáveis dependentes.
+
+Essa análise foi feita usando o software R e RStudio, para a eloboração desse relatório foi usado Rmarkdown, em conjunto com os seguintes pacotes, ainda foi criada a função *analise* para diagnotico dos modelos.
+
+```{r, message=FALSE, warning=FALSE}
+# Pacotes
+library(readxl)
+library(knitr)
+library(tidyverse)
+library(corrplot)
+library(car)
+library(lmtest)
+
+# função para avialiação dos modelos
+analise <- function(reg, plot_diagnostics = TRUE){
+  library(broom)
+  library(knitr)
+  library(lmtest)
+  library(car)
+  
+  # Função auxiliar para adicionar códigos de significância
+  sig_code <- function(p) {
+    if (p < 0.001) return("***")
+    else if (p < 0.01) return("**")
+    else if (p < 0.05) return("*")
+    else if (p < 0.1) return(".")
+    else return("")
+  }
+  
+  # Summary do modelo e extração dos valores p
+  summary_reg <- summary(reg)
+  coefs <- summary_reg$coefficients
+  p_values <- coefs[, 4] # Coluna com os valores p dos coeficientes
+  
+  # Adiciona os códigos de significância
+  sig_codes <- sapply(p_values, sig_code)
+  
+  # Testes de pressuposições
+  shapiro_res <- shapiro.test(resid(reg))
+  shapiro_p_valor <- shapiro_res$p.value
+  
+  bptest_res <- bptest(reg)
+  bptest_p_valor <- bptest_res$p.value
+  
+  dwtest_res <- dwtest(reg)
+  dwtest_p_valor <- dwtest_res$p.value
+  
+  # Outras métricas do modelo
+  AIC_valor <- AIC(reg)
+  BIC_valor <- BIC(reg)
+  r2 <- summary_reg$r.squared  
+  adj_r2 <- summary_reg$adj.r.squared
+  f_estat <- summary_reg$fstatistic[1]
+  p_valor <- pf(f_estat, summary_reg$fstatistic[2], summary_reg$fstatistic[3], lower.tail = FALSE)
+  
+  # Criação da tabela de VIF com os valores p e códigos de significância
+  vif_values <- vif(reg)
+  vif_table <- data.frame(
+    Variável = names(vif_values),
+    VIF = vif_values,
+    `P-valor dos coeficientes` = p_values[names(vif_values)],
+    `Significância` = sig_codes[names(vif_values)]
+  )
+  
+  # Tabelas dos resultados
+  resultados1 <- data.frame(
+    Métrica = c("R2", "R2 ajustado", "Estatística F", "P-valor F", "AIC", "BIC", 
+                "P-valor Shapiro-Wilk (Normalidade)", "P-valor Breusch-Pagan (Homoscedasticidade)", "P-valor Durbin-Watson (Independência)"),
+    Valor = c(r2, adj_r2, f_estat, p_valor, AIC_valor, BIC_valor, shapiro_p_valor, bptest_p_valor, dwtest_p_valor)
+  )
+  
+  tab1 <- kable(resultados1,
+                digits = 4,
+                col.names = c("Métrica", "Valor"),
+                align = c("l", "r"),
+                caption = "Resultados da Regressão e Testes de Pressuposições")
+  
+  tab2 <- kable(vif_table,
+                digits = 4,
+                col.names = c("Variável", "VIF", "P-valor dos coeficientes", "Significância"),
+                caption = "Grau de Multicolinearidade e Significância dos Coeficientes")
+  
+  # Plot dos gráficos de diagnóstico
+if (plot_diagnostics) {
+  x11()
+  par(mfrow=c(2,2))
+  plot(reg)
+}
+  
+  # Exibindo as tabelas
+  return(tab2)
+  tab2
+  tab1
+}
+
+```
+
+# Importando e explorando os dados.
+
+```{r}
+# Subir dados
+dados <- read_excel("Dados_Aula_08102024.xls",
+                                  col_types = "numeric")
+summary(dados)
+attach(dados)
+```
+
+Como já observado em análises anteriores, como último recurso para a ajuste do modelo foi necessário deixar de fora entradas consideradas outliers. (Considerou-se resíduos padronizados fora de -3 e +3 do modelo que utiliza todas as variveis sem transformações)
+
+```{r}
+dados2 <- dados[-c(82,48,34,79,78),]
+
+## transformando variaveis
+{
+a <- Crime
+b <- Populacao
+c <- Desemprego
+d <- Policiais
+e <- Renda
+f <- Area
+g <- Densidade
+h <- Crime_1000
+i <- Policiais_area
+j <- Gasto
+k <- Policiais_1000
+#variaveis transformadas ln
+La <- log(Crime)
+Lb <- log(Populacao)
+Lc <- log(Desemprego)
+Ld <- log(Policiais)
+Le <- log(Renda)
+Lf <- log(Area)
+Lg <- log(Densidade)
+Lh <- log(Crime_1000)
+Li <- log(Policiais_area)
+Lj <- log(Gasto)
+Lk <- log(Policiais_1000)
+#variaveis transformadas ^2
+a2 <- I(Crime^2)
+b2 <- I(Populacao^2)
+c2 <- I(Desemprego^2)
+d2 <- I(Policiais^2)
+e2 <- I(Renda^2)
+f2 <- I(Area^2)
+g2 <- I(Densidade^2)
+h2 <- I(Crime_1000^2)
+i2 <- I(Policiais_area^2)
+j2 <- I(Gasto^2)
+k2 <- I(Policiais_1000^2)
+#variaveis transformadas sqrt
+a12 <- sqrt(Crime)
+b12 <- sqrt(Populacao)
+c12 <- sqrt(Desemprego)
+d12 <- sqrt(Policiais)
+e12 <- sqrt(Renda)
+f12 <- sqrt(Area)
+g12 <- sqrt(Densidade)
+h12 <- sqrt(Crime_1000)
+i12 <- sqrt(Policiais_area)
+j12 <- sqrt(Gasto)
+k12 <- sqrt(Policiais_1000)
+
+inv_a <- 1 / Crime
+inv_b <- 1 / Populacao
+inv_c <- 1 / Desemprego
+inv_d <- 1 / Policiais
+inv_e <- 1 / Renda
+inv_f <- 1 / Area
+inv_g <- 1 / Densidade
+inv_h <- 1 / Crime_1000
+inv_i <- 1 / Policiais_area
+inv_j <- 1 / Gasto
+inv_k <- 1 / Policiais_1000
+}
+
+```
+
+Os dados apresentam 11 colunas de contendo dados de diferentes variaveis que influênciam na criminalidade das 92 cidades amostradas.
+
+## Plotando o gráfico de dispersão de cada variável em relação a variável resposta.
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+attach(dados)
+```
+
+
+```{r}
+# #Diagrama de dispersão#
+par(mfrow=c(1,2)) #divide a tela de grafico#
+plot(Populacao     ,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="População")
+plot(Desemprego    ,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="Desemprego")
+plot(Policiais     ,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="Policiais")
+plot(Renda         ,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="Renda")
+plot(Area          ,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="Area")
+plot(Densidade     ,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="Densidade")
+plot(Crime_1000    ,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="Crime_1000")
+plot(Policiais_area,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="Policiais_area")
+plot(Gasto         ,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="Gasto")
+plot(Policiais_1000,Crime, pch=16, lwd=2, main="", ylab="Crimes", xlab="Policiais_1000")
+
+```
+
+Observando os gráficos de disperssão, destaca-se a relação dos crimes com outras duas variaveis, população e policiais.  
+
+
+## Plotando a matriz de correlação entre as variáveis. 
+
+```{r}
+df <- as.data.frame(dados)
+
+matriz_cor <- cor(df)
+corrplot(matriz_cor, method = "number")
+
+```
+
+Destaca-se dessa matriz as seguintes pares de variaveis e suas correlações:
+
+* Policiais área $\times$ Densidade      (+0,93)
+* Crime          $\times$ População      (+0,89)
+* Policiais      $\times$ População      (+0,87)
+* Policiais      $\times$ Crimes         (+0,86)
+* Políciais/1000 $\times$ Políciais área (+0,73)
+* Políciais/1000 $\times$ Polícia        (+0,58)
+* Área           $\times$ População      (+0,55)
+* Densidade      $\times$ Área           (-0,55)
+* Renda          $\times$ Desemprego     (-0,67)
+
+# Testando modelos
+
+A seguir serão construídos modelos de forma impirica, mas também lógica. O modelos serão refinados utilizando os parâmetros e métricas de avaliação observadas a seguir. 
+
+```{r message=FALSE, warning=FALSE}
+attach(dados2)
+```
+
+
+```{r}
+# Modelo Completo 
+reg1 <- lm(a ~ 
+             b + c + d + e + f + g + h + i + j + k
+             +Lb + Lc + Ld + Le + Lf + Lg  + Lh + Li + Lj + Lk
+             +b2 + c2 + d2 + e2 + f2 + g2 + h2 + i2 + j2 + k2
+             +b12 + c12 + d12 + e12 + f12 + g12 + h12 + i12 + j12 + k12
+             +inv_b + inv_c + inv_d + inv_e + inv_f + inv_g + inv_h + inv_i + inv_j + inv_k
+)
+summary(reg1)
+
+```
+
+
+
+```{r}
+# Modelo 2 retirei Lg, Li
+reg2 <- lm(a ~ 
+             b + c + d + e + f + g + h + i + j + k +
+             Lb + Lc + Ld + Le + Lf + Lh + Lj + Lk +
+             b2 + c2 + d2 + e2 + f2 + g2 + h2 + i2 + j2 + k2 +
+             b12 + c12 + d12 + e12 + f12 + g12 + h12 + i12 + j12 + k12 +
+             inv_b + inv_c + inv_d + inv_e + inv_f + inv_g + inv_h + inv_i + inv_j + inv_k
+)
+analise(reg2, F)
+
+regS2 <- step(reg2) #retirou h,Lh,c2,h2,j2,k2,d12,inv_b,inv_c,inv_e,inv_g,inv_h
+analise(regS2, F)
+```
+
+
+
+```{r}
+# Modelo 3 retirei f12
+reg3 <- lm(a ~ 
+             b + c + d + e + f + g + i + j + k 
+           + Lb + Lc + Ld + Le + Lf + Lj + Lk 
+           + b2 + d2 + e2 + f2 + g2 + i2 
+           + b12 + c12 + e12 + g12 + h12 + i12 + j12 + k12 
+           + inv_d + inv_f + inv_i + inv_j + inv_k
+)
+analise(reg3)
+
+regS3 <- step(reg3) #retirou inf_f
+analise(regS3)
+```
+
+
+
+```{r}
+# Modelo 4 retirei g12
+reg4 <- lm(a ~ 
+             b + c + d + e + f + g + i + j + k 
+           + Lb + Lc + Ld + Le + Lf + Lj + Lk 
+           + b2 + d2 + e2 + f2 + g2 + i2 
+           + b12 + c12 + e12 + h12 + i12 + j12 + k12 
+           + inv_d + inv_i + inv_j + inv_k
+)
+analise(reg4)
+
+regS4 <- step(reg4) # retirou  g,g2
+analise(regS4)
+```
+
+
+
+```{r}
+# Modelo 5 retirei j
+reg5 <- lm(a ~ 
+             b + c + d + e + f + i + k 
+           + Lb + Lc + Ld + Le + Lf + Lj + Lk 
+           + b2 + d2 + e2 + f2 + i2 
+           + b12 + c12 + e12 + h12 + i12 + j12 + k12 
+           + inv_d + inv_i + inv_j + inv_k
+)
+analise(reg5)
+
+regS5 <- step(reg5) # retirou nada
+analise(regS5)
+```
+
+
+
+```{r}
+# Modelo 6 retirei Lk
+reg6 <- lm(a ~ 
+             b + c + d + e + f + i + k 
+           + Lb + Lc + Ld + Le + Lf + Lj 
+           + b2 + d2 + e2 + f2 + i2 
+           + b12 + c12 + e12 + h12 + i12 + j12 + k12 
+           + inv_d + inv_i + inv_j + inv_k
+)
+analise(reg6)
+
+regS6 <- step(reg6) # retirou nada
+analise(regS6)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+

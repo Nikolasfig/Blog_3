@@ -6,28 +6,28 @@
     <description>Recent content on Nikolas N. Figueiredo</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://Nikolasfig.github.io/Blog_3/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Título do conteúdo (edite)</title>
-      <link>https://Nikolasfig.github.io/Blog_3/escolar/7-ano/exemplo-conteudo/</link>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://Nikolasfig.github.io/Blog_3/escolar/7-ano/exemplo-conteudo/</guid>
-      <description>Uma frase curta descrevendo o material (aparece na listagem).</description>
+      <title>Lista de exercícios — 3º bimestre</title>
+      <link>https://Nikolasfig.github.io/Blog_3/escolar/7-ano/lista-3-bimestre/</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://Nikolasfig.github.io/Blog_3/escolar/7-ano/lista-3-bimestre/</guid>
+      <description>Lista de exercícios do 3º bimestre para download em PDF.</description>
     </item>
     <item>
-      <title>Título do conteúdo (edite)</title>
-      <link>https://Nikolasfig.github.io/Blog_3/escolar/8-ano/exemplo-conteudo/</link>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://Nikolasfig.github.io/Blog_3/escolar/8-ano/exemplo-conteudo/</guid>
-      <description>Uma frase curta descrevendo o material (aparece na listagem).</description>
+      <title>Lista de exercícios — 3º bimestre</title>
+      <link>https://Nikolasfig.github.io/Blog_3/escolar/8-ano/lista-3-bimestre/</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://Nikolasfig.github.io/Blog_3/escolar/8-ano/lista-3-bimestre/</guid>
+      <description>Lista de exercícios do 3º bimestre para download em PDF.</description>
     </item>
     <item>
-      <title>Título do conteúdo (edite)</title>
-      <link>https://Nikolasfig.github.io/Blog_3/escolar/9-ano/exemplo-conteudo/</link>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://Nikolasfig.github.io/Blog_3/escolar/9-ano/exemplo-conteudo/</guid>
-      <description>Uma frase curta descrevendo o material (aparece na listagem).</description>
+      <title>Lista de exercícios — 3º bimestre</title>
+      <link>https://Nikolasfig.github.io/Blog_3/escolar/9-ano/lista-3-bimestre/</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://Nikolasfig.github.io/Blog_3/escolar/9-ano/lista-3-bimestre/</guid>
+      <description>Lista de exercícios do 3º bimestre para download em PDF.</description>
     </item>
     <item>
       <title>Audiências públicas da Assembleia Legislativa de Minas Gerais: locus da sociedade civil ou espaço de acomodação de interesses de órgãos interestatais?</title>
@@ -71,10 +71,18 @@
 &lt;h3 id=&#34;contato&#34;&gt;Contato&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;E-mail: &lt;em&gt;nikolasfig@gmail.com&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/nikolas-figueiredo-82690627a&#34;&gt;www.linkedin.com/in/nikolas-figueiredo-82690627a&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/Nikolasfig&#34;&gt;&lt;em&gt;link&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Lattes: &lt;em&gt;&lt;a href=&#34;http://lattes.cnpq.br/3128218938439663&#34;&gt;http://lattes.cnpq.br/3128218938439663&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Youtube: &lt;a href=&#34;https://www.youtube.com/@Prof.Figueiredo&#34;&gt;&lt;em&gt;@Prof.Figueiredo&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/nikolas-figueiredo-82690627a&#34;&gt;&lt;em&gt;link&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/Nikolasfig&#34;&gt;&lt;em&gt;Nikolasfig&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lattes: &lt;a href=&#34;http://lattes.cnpq.br/3128218938439663&#34;&gt;&lt;em&gt;link&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Odds Compiler Assessment</title>
+      <link>https://Nikolasfig.github.io/Blog_3/projetos/odds-compiler-assessment/</link>
+      <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://Nikolasfig.github.io/Blog_3/projetos/odds-compiler-assessment/</guid>
+      <description>Relatório completo em R (distill) sobre o Odds Compiler Assessment, incorporado abaixo.</description>
     </item>
   </channel>
 </rss>
