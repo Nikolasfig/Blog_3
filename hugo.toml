@@ -48,3 +48,9 @@ identifier = "escolar"
 name = "Escolar"
 url = "/escolar/"
 weight = 50
+
+[[menu.main]]
+identifier = "ensaios"
+name = "Ensaios"
+url = "/ensaios/"
+weight = 60
